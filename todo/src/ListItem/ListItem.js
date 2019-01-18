@@ -8,10 +8,17 @@ class ListItem extends Component {
 
     render() {
         return (
-            <div class="form-check">
-                <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..." />
-                {this.props.name}
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="checkbox" aria-label="Checkbox for following text input" />
+                    </div>
+                </div>
+                <input value={this.props.name} type="text" class="form-control" aria-label="Text input with checkbox" />
             </div>
+
+
 
 
         );

@@ -13,9 +13,15 @@ class Lists extends Component {
 
   render() {
     return (
-      <div className="Lists">
-        {this.state.listCardsTitle.map(cardTitle => <CardList title={cardTitle}></CardList>)})}
+      <div class="container">
+        <div className="Lists">
+        <div class="row">
+
+            {this.state.listCardsTitle.map(cardTitle => <CardList title={cardTitle}></CardList>)}
+        </div>
+        </div>
       </div>
+
     );
   }
 }
