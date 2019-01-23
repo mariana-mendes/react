@@ -13,18 +13,15 @@ class List extends Component {
     }
 
     updatePercent = (checked) => {
-        if(checked){
-            this.setState({percent: (100/(this.state.itens.length)) + this.state.percent}, ()=>{
-                this.props.callbackCardList(this.state.percent)
-            })
-        }else{
-            this.setState({percent: this.state.percent - (100/(this.state.itens.length))} ,()=>{
-                this.props.callbackCardList(this.state.percent)
-            })
-        }
+        const part = (100 /(this.state.itens.length));
+        let percent = checked ? this.state.percent+part : this.state.percent-part;
+
+        this.setState({ percent: percent }, () => {
+            this.props.callbackCardList(this.state.percent)
+        })
     }
 
-    callbackChecked = (checked) =>{
+    callbackChecked = (checked) => {
         this.updatePercent(checked);
     }
 

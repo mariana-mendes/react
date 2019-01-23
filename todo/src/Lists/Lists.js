@@ -16,7 +16,6 @@ class Lists extends Component {
       <div class="container">
         <div className="Lists">
         <div class="row">
-
             {this.state.listCardsTitle.map(cardTitle => <CardList title={cardTitle}></CardList>)}
         </div>
         </div>

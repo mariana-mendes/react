@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 class ListItem extends Component {
     constructor(props) {
         super(props);
-        this.state = { name: undefined, checked: false}
+        this.state = { name: undefined, checked: false }
         this.updateCheckbox = this.updateCheckbox.bind(this);
     }
-    updateCheckbox(){
-        this.setState({checked: !this.state.checked}, ()=>{
+    updateCheckbox() {
+        this.setState({ checked: !this.state.checked }, () => {
             this.props.callbackList(this.state.checked);
         })
     }
