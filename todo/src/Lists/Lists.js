@@ -13,13 +13,13 @@ class Lists extends Component {
 
   render() {
     return (
-      <div class="container">
         <div className="Lists">
-        <div class="row">
+       <div class="container-fluid">
+            <div class="row">            
             {this.state.listCardsTitle.map(cardTitle => <CardList title={cardTitle}></CardList>)}
         </div>
         </div>
-      </div>
+        </div>
 
     );
   }
