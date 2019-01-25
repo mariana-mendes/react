@@ -15,9 +15,7 @@ class Lists extends Component {
     return (
         <div className="Lists">
        <div class="container-fluid">
-            <div class="row">            
             {this.state.listCardsTitle.map(cardTitle => <CardList title={cardTitle}></CardList>)}
-        </div>
         </div>
         </div>
 

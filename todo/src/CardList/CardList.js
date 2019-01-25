@@ -17,10 +17,6 @@ class CardList extends Component {
 
     render() {
         return (
-            <div class="card-deck-wrapper">
-                <div class="card-deck">
-                    <div class="col-sm-4">
-                        <div class="thumbnail">
                             <div className="card" >
                                 <div className="card-body">
                                     <h5 className="card-title">{this.props.title}</h5>
@@ -30,10 +26,6 @@ class CardList extends Component {
                                     <p className="card-text"></p>
                                 </div>
                                 <List key={this.state.title} callbackCardList={this.callbackCardList}></List>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         );
     }
