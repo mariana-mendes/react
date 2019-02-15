@@ -12,12 +12,15 @@ class List extends Component {
         this.updatePercent = this.updatePercent.bind(this);
     }
 
+    componentWillMount = ()  =>{
+            this.props.callbackCardList(this.state.percent, this.state.itens)
+    }
     updatePercent = (checked) => {
         const part = (100 /(this.state.itens.length));
         let percent = checked ? this.state.percent+part : this.state.percent-part;
 
         this.setState({ percent: percent }, () => {
-            this.props.callbackCardList(this.state.percent)
+            this.props.callbackCardList(this.state.percent, this.state.itens)
         })
     }
 

@@ -8,11 +8,13 @@ class CardList extends Component {
         this.state = {
             title: undefined,
             progress: '0%',
+            itens: []
         }
     }
 
-    callbackCardList = (progress) => {
-        this.setState({ progress: `${progress}%` })
+    callbackCardList = (progress, itens) => {
+        this.setState({ progress: `${progress}%`, itens: itens })
+        console.log(this.state);
     }
 
     render() {
