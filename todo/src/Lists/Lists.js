@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CardList from '../CardList/CardList';
+import List from '../List/List';
 
 class Lists extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class Lists extends Component {
     return (
         <div className="Lists">
        <div class="container-fluid">
-            {this.state.listCardsTitle.map(cardTitle => <CardList title={cardTitle}></CardList>)}
+            {this.state.listCardsTitle.map(cardTitle => <List title={cardTitle}></List>)}
         </div>
         </div>
 
