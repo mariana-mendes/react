@@ -18,7 +18,6 @@ class Lists extends Component {
             {this.state.listCardsTitle.map(cardTitle => <List title={cardTitle}></List>)}
         </div>
         </div>
-
     );
   }
 }

@@ -6,14 +6,28 @@ import './List.css';
 class List extends Component {
     constructor(props) {
         super(props);
+
         // temp static list
         this.state = {
+            title: '',
             itens: ['Task1', 'Task2', 'Task2', 'Task3'],
             progress: 0
         }
         this.updatePercent = this.updatePercent.bind(this);
         this.setStatePercent = this.setStatePercent.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.saveUpdate = this.saveUpdate.bind(this);
+    }
 
+    handleChange = e => {
+        let change = {}
+        change[e.target.name] = e.target.value
+        this.setState(change)
+    }
+
+    saveUpdate = () =>{
+        console.log("Salvando... ", this.state)
+        //requisição patch
     }
 
     updatePercent = (checked) => {
@@ -27,29 +41,25 @@ class List extends Component {
     }
 
     setStatePercent = (progress) => {
-        console.log(progress);
         this.setState({ progress: progress})
-        console.log(this.state);
     }
 
     render() {
         return (
-
             <div className="card" >
-
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
 
-                        <button class="close" aria-label="Close" style={{ float: "right" }}>
+                    <div class="col-md-12">
+                        <button onClick={this.saveUpdate} class="close" aria-label="Close" style={{ float: "right" }}>
                             <svg id="i-edit" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                 <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
                             </svg>
                         </button>
-
                     </div>
+                    
                     <div class="col-md-12">
-                        <button type="button" style={{ float: "right" }} class="close" aria-label="Close">
+                        <button onClick={this.deleteList} type="button" style={{ float: "right" }} class="close" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -57,9 +67,8 @@ class List extends Component {
                 </div>
             </div>
 
-
             <div className="card-body">
-                <h5 className="card-title">{this.props.title}</h5>
+                <input onChange={this.handleChange} className="card-title" defaultValue={this.props.title}/>
                 <div className="progress">
                     <div className="progress-bar progress-bar-striped bg-info" role="progressbar" style={{ width: `${this.state.progress}%` }} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
@@ -72,9 +81,6 @@ class List extends Component {
                 </div>
             </div>
         </div>
-
-
-
         );
     }
 }
