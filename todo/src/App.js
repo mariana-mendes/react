@@ -5,12 +5,21 @@ import Sidebar from './Sidebar/Sidebar';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.createNewList = this.createNewList.bind(this)
+}
+
+  createNewList = () =>{
+      console.log("vish como cria agora? :>")
+  }
+
   render() {
     return (
       <div className="App">
         <div className="row">
         <div class="container-fluid">
-          <Sidebar></Sidebar>
+          <Sidebar newList={this.createNewList}></Sidebar>
           <Lists></Lists>
         </div>
         </div>

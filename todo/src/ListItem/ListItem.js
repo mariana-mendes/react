@@ -8,6 +8,7 @@ class ListItem extends Component {
         this.updateCheckbox = this.updateCheckbox.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
+    
     updateCheckbox() {
         this.setState({ checked: !this.state.checked }, () => {
             this.props.callbackList(this.state.checked);
