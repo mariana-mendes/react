@@ -11,7 +11,6 @@ class App extends Component {
 }
 
   createNewList = () =>{
-      console.log("vish como cria agora? :>")
   }
 
   render() {
