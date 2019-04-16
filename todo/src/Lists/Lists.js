@@ -5,9 +5,7 @@ class Lists extends Component {
   constructor(props) {
     super(props);
 
-    // temp static list
     this.state = {
-      listCardsTitle: ['Books', 'Tasks', 'Movies', 'Things']
     }
   }
 
