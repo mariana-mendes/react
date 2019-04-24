@@ -1,0 +1,56 @@
+[
+    {
+        "title": "a",
+        "progress": 40,
+        "itens": [
+            {
+                "name": "aniquilaçao",
+                "checked": true
+            },
+            {
+                "name": "american gods",
+                "checked": false
+            },
+            {
+                "name": "aniadadasd",
+                "checked": true
+            }
+        ]
+    },
+    {
+        "title": "tasks",
+        "progress": 40,
+        "itens": [
+            {
+                "name": "a",
+                "checked": true
+            },
+            {
+                "name": "d gods",
+                "checked": false
+            },
+            {
+                "name": "eqw",
+                "checked": true
+            }
+        ]
+    },
+    {
+        "title": "home",
+        "progress": 40,
+        "itens": [
+            {
+                "name": "aniquilaçao",
+                "checked": false
+            },
+            {
+                "name": "american gods",
+                "checked": false
+            },
+            {
+                "name": "aniadadasd",
+                "checked": false
+            }
+        ]
+    }
+]

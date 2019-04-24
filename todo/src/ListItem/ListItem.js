@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class ListItem extends Component {
     constructor(props) {
         super(props);
-        this.state = { name: undefined,
+        this.state = { 
+             name: undefined,
              checked: false }
         this.updateCheckbox = this.updateCheckbox.bind(this);
         this.handleChange = this.handleChange.bind(this);

@@ -6,12 +6,10 @@ import './List.css';
 class List extends Component {
     constructor(props) {
         super(props);
-
-        // temp static list
         this.state = {
-            title: '',
-            itens: ['Task1', 'Task2', 'Task2', 'Task3'],
-            progress: 0
+            title: props.title || '',
+            itens: props.itens || [],
+            progress: props.progress || 0
         }
         this.updatePercent = this.updatePercent.bind(this);
         this.setStatePercent = this.setStatePercent.bind(this);
@@ -77,7 +75,7 @@ class List extends Component {
            
             <div className="List">
                 <div class="list-group">
-                    {this.state.itens.map(taskName => <ListItem callbackList={this.callbackChecked} name={taskName}></ListItem>)}
+                    {this.state.itens.map(task => <ListItem callbackList={this.callbackChecked} name={task.name} checked={task.checked}></ListItem>)}
                 </div>
             </div>
         </div>
